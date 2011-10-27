@@ -10,6 +10,7 @@ our @ISA = qw(DBI::db);
 sub connected {
     my ($dbh, $dsn, undef, undef, $attr) = @_;
 
+    # should be configurable?
     $dbh->{RaiseError} = 1;
     $dbh->{PrintError} = 0;
     $dbh->{ShowErrorStatement}  = 1;
